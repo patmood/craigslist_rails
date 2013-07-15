@@ -7,10 +7,20 @@ class UsersController < ApplicationController
   end
 
   def create
-    p "======== HERE'S THE PARAMS! ========="
-    p params
     @user = User.create(params[:user])
     redirect_to user_path(@user)
+  end
+
+  def show
+  end
+
+  def edit
+  end 
+
+  def update
+  end
+
+  def destroy
   end
 
 

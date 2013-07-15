@@ -1,7 +1,9 @@
 <%= form_for @post do |f|%>
-  <%= label_tag :title %>
+  <%= f.label :title %>
   <%= f.text_field :title %><br>
-  <%= label_tag :content %>
+  <%= f.label :content %>
   <%= text_area_tag('post[content]', @post.content, size: "50x6") %><br>
+  <%= f.label :category_id %>
+  <%= collection_select :post, :category_id, Category.all, :id, :name %>
   <%= f.submit %>
 <% end %>

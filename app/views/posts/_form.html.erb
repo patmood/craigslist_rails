@@ -1,0 +1,7 @@
+<%= form_for @post do |f|%>
+  <%= label_tag :title %>
+  <%= f.text_field :title %><br>
+  <%= label_tag :content %>
+  <%= text_area_tag('post[content]', @post.content, size: "50x6") %><br>
+  <%= f.submit %>
+<% end %>

@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: craigslist_development
   pool: 5
-  username: root
+  username: craigslist
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a

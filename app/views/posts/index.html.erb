@@ -1,6 +1,7 @@
-Posts <%= link_to "New", new_post_path %>
+<h1>Posts</h1> <%= link_to "New", new_post_path %>
 
-<% @posts.each do |post| %>
-  <div><%= post.title %> <%= link_to "Edit", edit_post_path(post) %> <%= link_to "Delete", post_path(post), method: :delete %></div>
-
-<% end %>
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= post.title %> <%= link_to "Edit", edit_post_path(post) %> <%= link_to "Delete", post_path(post), method: :delete %></li>
+  <% end %>
+</ul>

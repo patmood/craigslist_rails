@@ -1,1 +1,6 @@
-User page
+<h1>Users</h1> <%= link_to "New User", new_user_path %>
+<ul>
+  <% @users.each do |user| %>
+  <li><%= user.email %> <%= link_to "Edit", edit_user_path(user) %></li>
+  <% end %>
+</ul>

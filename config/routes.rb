@@ -1,5 +1,7 @@
 Craigslist::Application.routes.draw do
 
+  match "/sessions/new" => 'session#new'
+
   resources :posts, :categories, :users
 
   # The priority is based upon order of creation:

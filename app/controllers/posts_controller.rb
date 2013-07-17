@@ -8,8 +8,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(params[:post])
-    redirect_to post_path(@post)
+    if current_user
+      @post = current_user.posts.create(params[:post])
+      redirect_to post_path(@post)
+    else
+      redirect_to new_session_path
+    end
   end
 
   def show

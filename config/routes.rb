@@ -1,8 +1,12 @@
 Craigslist::Application.routes.draw do
 
-  match "/sessions/new" => 'session#new'
+  match "/" => 'categories#index'
+  match '/register' => 'users#new'
+  match "/sign_in" => 'sessions#new'
+  match "/sign_out" => 'sessions#destroy'
 
   resources :posts, :categories, :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130715205226) do
     t.string   "title"
     t.text     "content"
     t.integer  "category_id"
+    t.integer  "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
